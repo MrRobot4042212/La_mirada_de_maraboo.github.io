@@ -63,6 +63,7 @@ header{
 
 main{
     grid-area: 2/1/3/10;
+    margin: 20px;
 }
 
 .about{
@@ -123,30 +124,30 @@ main{
 
 .horizontalContainer{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-content: center;
     align-items: center;
     flex-wrap: wrap;
-
+    width: 100%;
 }
 
 .horizontalList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(150px, 1fr));
     width: 100%;
-    column-gap: 50px;
+    column-gap: 30px;
     align-content: center;
     align-items: center;
     justify-content: center;
+    margin-left: -35px;
+
+
 }
 
 .horizontalList li{
     display: flex;
     list-style: none;
-    max-width: 20%;
-    min-width: 10%;
     flex-direction: column;
     align-content: center;
     align-items: center;
@@ -174,14 +175,15 @@ main{
     justify-items: center;
 }
 .tributeList{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, minmax(150px, 1fr));
+    width: 100%;
+    column-gap: 30px;
     align-content: center;
     align-items: center;
     justify-content: center;
-    column-gap: 20px;
-    list-style: none;
+    margin-left: -35px;
 }
 
 .tributeList li{
@@ -190,7 +192,6 @@ main{
     align-content: center;
     align-items: center;
     justify-items: center;
-    width: 20%;
 }
 
 .tributeList p{
