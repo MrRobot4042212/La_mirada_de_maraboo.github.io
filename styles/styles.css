@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'montserrat';
+    src: url(../data/font/montserrat/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: bold;
+  }
+  @font-face {
+    font-family: 'montserrat';
+    src: url(../data/font/montserrat/Montserrat-Medium.ttf);
+    font-weight: 700;
+    font-style:normal;
+  }
+  @font-face {
+    font-family: 'montserrat';
+    src: url(../data/font/montserrat/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style:normal;
+  }
+  @font-face {
+    font-family: 'montserrat';
+    src: url(../data/font/montserrat/Montserrat-SemiBold.ttf);
+    font-weight: 800;
+    font-style:normal;
+  }
+  @font-face{
+    font-family: 'montserrat';
+    src: url(../data/font/montserrat/Montserrat-Italic.ttf);
+    font-weight:400;
+    font-style: italic; 
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -100,9 +132,8 @@ main{
 
 .horizontalList li *{
     text-align: start;
+    font-family:'montserrat';
 }
-
-
 
 .tribute{
     display: flex;
@@ -123,9 +154,25 @@ main{
 
 .tributeList p{
     width: 20%;
-    text-align: start;
 }
 
+
+h1{
+    font-family:'montserrat';
+    font-weight: bold;
+    font-style: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+p{
+    font-family:'montserrat';
+    font-weight: normal;
+    font-style: normal;
+    text-align: start;
+
+
+}
 
 
 
