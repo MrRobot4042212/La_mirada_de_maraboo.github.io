@@ -1,0 +1,147 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+    background-color:#f2c47f ;
+}
+
+header{
+    grid-area: 1/1/1/10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #eba24c;
+    margin: 0;
+    height: 200px;
+}
+
+
+.logo img{
+        width: 250px;
+        object-fit: cover;
+        margin: auto;
+}
+
+main{
+    grid-area: 2/1/3/10;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: #f2c47f;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.about{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.imgContainer img{
+    max-width: 300px;
+    min-width: 200px;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.textAbout{
+    width: 50%;
+}
+
+.horizontalContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.horizontalList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    column-gap: 50px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizontalList li{
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    max-width: 20%;
+    min-width: 10%;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.horizontalList li *{
+    text-align: start;
+}
+
+
+
+.tribute{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.tributeList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.tributeList p{
+    width: 20%;
+    text-align: start;
+}
+
+
+
+
+
+/* 
+'carrot-orange': {
+        '50': '#fef8ee',
+        '100': '#fcf0d8',
+        '200': '#f7ddb1',
+        '300': '#f2c47f',
+        '400': '#eba24c',
+        '500': '#e89038',
+        '600': '#d86f1e',
+        '700': '#b3551b',
+        '800': '#8f441d',
+        '900': '#73391b',
+        '950': '#3e1c0c',
+    },
+*/
