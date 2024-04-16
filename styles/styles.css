@@ -1,6 +1,7 @@
 
 html{
     scroll-behavior: smooth;
+
 }
                         /* FUENTES*/
     @font-face {
@@ -71,6 +72,9 @@ and (max-width: 736px)
         width: 100%;
         align-content: center;
         justify-content: space-around;
+        position: sticky;
+        top: 0;
+        z-index: 3;
     }
     
     .logo img{
@@ -103,7 +107,35 @@ and (max-width: 736px)
         font-style: normal;
         color: rgb(187, 101, 2,1)
     }
+
+    .cambiarIdiomaIcon{
+        position: relative;
+        z-index: 5;
+        cursor: pointer;
+    }
+    .seleccionIdiomaIcon{
+        position: absolute;
+        left: 0;
+        background-color: rgb(200, 120, 0 ,0.7);
+        display: none;
+        margin: 5px;
+    }
     
+    .seleccionIdiomaIcon li{
+        display: flex;
+        padding: 10px;
+        flex-wrap: wrap;
+        transition: all 0.5s linear;
+    }
+    
+    .seleccionIdiomaIcon li a:hover{
+        transform: scale(1.05);
+        transition: all 0.5s linear;
+    }
+    .scrolled{
+        background-color: rgb(200, 120, 0 ,1);
+    }
+
     
     header ul a:hover {
         color: #482000;
@@ -275,6 +307,7 @@ and (max-width: 736px)
         font-size: 20px;
         height: 350px;
         text-align: center;
+        height: 100%
     }
     
     
@@ -299,6 +332,75 @@ and (max-width: 736px)
         font-weight: normal;
         font-style: normal;
         text-align: start;
+    }
+
+    .contenedorDonacion{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 30px;
+        border-bottom:#482000 2px solid ;
+    }
+    .textoDonacion{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-items: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    
+
+
+    .textoDonacion h1{
+        text-align: center;
+        max-width: 100%;
+    }
+    .textoDonacion p{
+        text-align: center;
+        max-width: 100%;
+        font-size: 25px;
+    }
+    
+    .donacion{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+    .imgDonacion{
+        width: 100%;
+        height: 100%;
+        box-shadow: 10px 10px 10px 10px rgb(0, 0, 0,0.2);
+    }
+    #botonDonacion{
+        width: 100%;
+        min-width: 50px;
+        text-align: center;
+    }
+    
+    .rowDonacion{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        justify-items: center;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #botonDonacion :hover{
+        transform: scale(1.3);
+        transition: all 0.5s ease;
     }
     
     footer {
@@ -348,6 +450,31 @@ and (max-width: 736px)
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media  screen and (min-width: 737px){
 
 body{
@@ -356,10 +483,12 @@ body{
     grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 30px;
-    background-color:rgb(187, 101, 2, 0.6) ;
+    background-color:rgb(187, 101, 2, 0.6);
 }
 
 header{
+    position: sticky;
+    top: 0;
     grid-area: 1/1/1/10;
     display: flex;
     background-color: rgb(200, 120, 0 ,0.7);
@@ -368,9 +497,10 @@ header{
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
     align-content: center;
     justify-content: space-around;
+    z-index: 3;
+    margin: 10px;
 }
 
 .logo img{
@@ -396,6 +526,11 @@ header ul {
     flex-wrap: wrap;
 }
 
+.scrolled{
+    background-color: rgb(200, 120, 0 ,1);
+
+}
+
 header ul a{
     text-decoration: none;
     font-family: 'montserrat';
@@ -404,6 +539,32 @@ header ul a{
     font-style: normal;
     color: rgb(187, 101, 2,1)
 }
+
+.cambiarIdioma{
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
+.seleccionIdioma{
+    position: absolute;
+    left: 0;
+    background-color: rgb(200, 120, 0 ,0.7);
+    display: none;
+    margin: 5px;
+}
+
+.seleccionIdioma li{
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    transition: all 0.5s linear;
+}
+
+.seleccionIdioma li a:hover{
+    transform: scale(1.05);
+    transition: all 0.5s linear;
+}
+
 
 .icons{
     display: none;
@@ -417,7 +578,7 @@ header ul a:hover {
 
 main{
     grid-area: 2/1/3/10;
-    margin: 20px;
+    margin: 10px;
 }
 
 .about{
@@ -456,7 +617,7 @@ main{
     position: absolute;
     width: 100%;
     height: 100%;
-    background:url(../data/img/childrenImg/1713126252627.jpg) fixed;
+    background:url(../data/img/childrenImg/1713126252627.jpg)fixed;
     background-size: contain;
     z-index: -10;
     top: 0;
@@ -471,7 +632,7 @@ main{
 .textAbout{
     position: relative;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4)
+    background-color: rgba(0, 0, 0, 0.5)
 
 }
 
@@ -611,8 +772,72 @@ p{
     text-align: start;
 }
 
+.contenedorDonacion{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 30px;
+    border-bottom:#482000 2px solid ;
+}
+.textoDonacion{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.textoDonacion h1 , p{
+    text-align: center;
+    max-width: 100%;
+    min-width: 300px;
+}
+
+.donacion{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-items: center;
+    max-width: 35%;
+}
+.imgDonacion{
+    width: 100%;
+    height: 100%;
+    box-shadow: 10px 10px 10px 10px rgb(0, 0, 0,0.2);
+
+}
+#botonDonacion{
+    width: 100%;
+    min-width: 50px;
+    text-align: center;
+}
+
+.rowDonacion{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#botonDonacion :hover{
+    transform: scale(1.3);
+    transition: all 0.5s ease;
+}
 footer {
-    grid-area: 3/1/3/10;
+    grid-area: 4/1/4/10;
 
     position: relative;
     left: 0;
@@ -650,18 +875,3 @@ footer {
 
 }
 
-/* 
-'carrot-orange': {
-        '50': '#fef8ee',
-        '100': '#fcf0d8',
-        '200': '#f7ddb1',
-        '300': '#f2c47f',
-        '400': '#eba24c',
-        '500': '#e89038',
-        '600': '#d86f1e',
-        '700': '#b3551b',
-        '800': '#8f441d',
-        '900': '#73391b',
-        '950': '#3e1c0c',
-    },
-*/
