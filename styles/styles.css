@@ -63,7 +63,7 @@ and (max-width: 736px)
     header{
         grid-area: 1/1/1/10;
         display: flex;
-        background-color: rgb(200, 120, 0 ,0.7);
+        background-color: rgb(164, 99, 57,0.7);
         margin: 0;
         min-height: 150px;
         align-items: center;
@@ -98,14 +98,14 @@ and (max-width: 736px)
         flex-wrap: wrap;
     }
     
+
     header ul a{
         text-decoration: none;
-        color: #482000;
         font-family: 'montserrat';
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 25px;
+        font-weight: normal;
         font-style: normal;
-        color: rgb(187, 101, 2,1)
+        color:rgb(72, 32, 0,0.7);
     }
 
     .cambiarIdiomaIcon{
@@ -116,7 +116,7 @@ and (max-width: 736px)
     .seleccionIdiomaIcon{
         position: absolute;
         left: 0;
-        background-color: rgb(200, 120, 0 ,0.7);
+        background-color: #482000;
         display: none;
         margin: 5px;
     }
@@ -133,12 +133,12 @@ and (max-width: 736px)
         transition: all 0.5s linear;
     }
     .scrolled{
-        background-color: rgb(200, 120, 0 ,1);
+        background-color: rgb(164, 99, 57,1);
     }
 
     
     header ul a:hover {
-        color: #482000;
+        color: rgb(216, 159, 111);
         transition: all 0.5s ease;
     }
     
@@ -491,7 +491,7 @@ header{
     top: 0;
     grid-area: 1/1/1/10;
     display: flex;
-    background-color: rgb(200, 120, 0 ,0.7);
+    background-color: rgb(164, 99, 57,0.7);
     margin: 0;
     min-height: 150px;
     align-items: center;
@@ -527,7 +527,7 @@ header ul {
 }
 
 .scrolled{
-    background-color: rgb(200, 120, 0 ,1);
+    background-color: rgb(164, 99, 57,1);
 
 }
 
@@ -537,7 +537,7 @@ header ul a{
     font-size: 25px;
     font-weight: normal;
     font-style: normal;
-    color: rgb(187, 101, 2,1)
+    color:#482000;
 }
 
 .cambiarIdioma{
@@ -550,7 +550,7 @@ header ul a{
     left: 0;
     background-color: rgb(200, 120, 0 ,0.7);
     display: none;
-    margin: 5px;
+    margin: 10px 10px 20px 10px;
 }
 
 .seleccionIdioma li{
@@ -558,11 +558,12 @@ header ul a{
     padding: 10px;
     flex-wrap: wrap;
     transition: all 0.5s linear;
+    align-content: center;
 }
 
 .seleccionIdioma li a:hover{
     transform: scale(1.05);
-    transition: all 0.5s linear;
+    transition: all 0.2s linear;
 }
 
 
@@ -572,7 +573,7 @@ header ul a{
 
 
 header ul a:hover {
-    color: #482000;
+    color: rgb(216, 159, 111);
     transition: all 0.5s ease;
 }
 
